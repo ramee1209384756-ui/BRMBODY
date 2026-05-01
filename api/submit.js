@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     const { name, phone, date, message } = req.body;
 
     const NOTION_API_KEY = process.env.NOTION_API_KEY;
-    const DATABASE_ID = process.env.NOTION_DATABASE_SOURCE_ID;
+    const DATABASE_ID = process.env.NOTION_DATABASE_SOURCE_ID || process.env.NOTION_DATABASE_ID;
 
     if (!NOTION_API_KEY || !DATABASE_ID) {
       console.error("Missing Notion environment variables");
