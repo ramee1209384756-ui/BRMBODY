@@ -506,22 +506,63 @@ details[open] summary::after {
     color: rgba(255,255,255,0.9);
 }
 
-.cta-box {
-    background-color: rgba(255,255,255,0.1);
-    padding: 48px 24px;
-    border-radius: var(--radius-md);
-    margin-bottom: 48px;
-}
-
-.cta-box .btn {
+/* 폼 스타일 */
+.form-container {
     background-color: var(--background);
-    color: var(--primary);
+    padding: 40px;
+    border-radius: var(--radius-md);
+    max-width: 600px;
+    margin: 0 auto 48px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    color: var(--foreground);
+    text-align: left;
 }
 
-.info-text {
-    margin-top: 20px;
-    font-size: 0.875rem;
-    opacity: 0.8;
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: var(--surface);
+    color: var(--foreground);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: var(--background);
+    box-shadow: 0 0 0 3px rgba(176, 137, 104, 0.2);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
 }
 
 .center-info {
